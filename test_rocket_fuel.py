@@ -20,6 +20,12 @@ class TestRocket(unittest.TestCase):
     def test_string_value(self):
         assert_that(calculate_fuel("test"), equal_to(False))
 
+    def test_float_value(self):
+        assert_that(calculate_fuel(12.0), equal_to(2))
+
+    def test_mass_1(self):
+        assert_that(calculate_fuel(1), equal_to(1))
+
 
 if __name__ == '__main__':
     unittest.main()
