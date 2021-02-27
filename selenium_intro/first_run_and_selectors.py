@@ -1,12 +1,11 @@
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 
 options = webdriver.ChromeOptions()
 options.add_argument('--start-maximized')
 
 driver = webdriver.Chrome(executable_path=ChromeDriverManager().install(), options=options)
 driver.get("http://automationpractice.com")
-
 
 driver.find_element_by_class_name("shop-phone")
 
@@ -27,11 +26,11 @@ driver.find_element_by_css_selector('[href="#homefeatured"]')  # same as .homefe
 driver.find_element_by_css_selector("#contact-link")
 
 # path selectors
-
+driver.find_element_by_xpath("//*[@id='home-page-tabs']//a[@class='homefeatured']")
+driver.find_element_by_xpath("//div[@class='shopping_cart']/a")
 
 # elements = driver.find_elements_by_class_name("product-container-test")
 # assert elements, "Elements not found"
 
 
 driver.quit()
-
