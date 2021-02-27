@@ -1,5 +1,5 @@
 import unittest
-from src.calculator_class import Calculator
+from tests_introduction.src.calculator_class import Calculator
 from hamcrest import *
 
 class TestBasicOperations(unittest.TestCase):
