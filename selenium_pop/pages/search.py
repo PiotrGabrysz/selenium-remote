@@ -4,7 +4,6 @@ from selenium_pop.pages.base import BasePage
 
 
 class SearchPage(BasePage):
-
     ALERT_WARNING_SELECTOR = (By.XPATH, "//*[@class='alert alert-warning']")
     SEARCH_FILED_SELECTOR = (By.ID, "search_query_top")
     SUBMIT_SEARCH_SELECTOR = (By.NAME, "submit_search")

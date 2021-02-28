@@ -1,10 +1,11 @@
 import unittest
+
 from hamcrest import *
 
-from selenium_pop.utils import get_driver
 from selenium_pop.config import *
 from selenium_pop.pages.login import LoginPage
 from selenium_pop.pages.profile import ProfilePage
+from selenium_pop.utils import get_driver
 
 
 class ProfileTest(unittest.TestCase):

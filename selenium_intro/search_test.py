@@ -1,4 +1,5 @@
 import unittest
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
@@ -7,7 +8,6 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 
 class SearchTest(unittest.TestCase):
-
     ALERT_WARNING_SELECTOR = (By.XPATH, "//*[@class='alert alert-warning']")
     SEARCH_FILED_SELECTOR = (By.ID, "search_query_top")
     SUBMIT_SEARCH_SELECTOR = (By.NAME, "submit_search")

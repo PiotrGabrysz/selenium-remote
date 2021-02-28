@@ -1,6 +1,8 @@
 import unittest
-from python_basics.fuel_task import calculate_fuel
+
 from hamcrest import *
+
+from python_basics.fuel_task import calculate_fuel
 
 
 class TestRocket(unittest.TestCase):

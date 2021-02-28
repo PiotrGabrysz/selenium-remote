@@ -9,5 +9,5 @@ def calculate_fuel(mass):
     elif mass < 3:
         return 1
     else:
-        fuel = mass//3 - 2
+        fuel = mass // 3 - 2
         return fuel

@@ -4,9 +4,9 @@ a_int = 1  # limited by memory, no singed/unsigned
 a_float = 1.0  # float defined by dot
 # no double in Python
 
-print(1/2)
-print(int(1/2))
-print(1//2)
+print(1 / 2)
+print(int(1 / 2))
+print(1 // 2)
 
 a_str = "test"
 a_str2 = 'test'  # same as double quote

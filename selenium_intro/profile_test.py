@@ -1,4 +1,5 @@
 import unittest
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
@@ -7,7 +8,6 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 
 class MyTestCase(unittest.TestCase):
-
     LOGIN_BUTTON_SELECTOR = (By.CLASS_NAME, "login")
     EMAIL_FIELD_SELECTOR = (By.ID, "email")
     PASSWORD_FIELD_SELECTOR = (By.ID, "passwd")
@@ -22,7 +22,6 @@ class MyTestCase(unittest.TestCase):
         self.driver = webdriver.Chrome(executable_path=ChromeDriverManager().install(), options=options)
         self.driver.implicitly_wait(5)
         self.driver.get("http://automationpractice.com")
-
 
         # Login action
         self.driver.find_element(*self.LOGIN_BUTTON_SELECTOR).click()
@@ -46,6 +45,7 @@ class MyTestCase(unittest.TestCase):
 
     def tearDown(self) -> None:
         pass
+
 
 if __name__ == '__main__':
     unittest.main()

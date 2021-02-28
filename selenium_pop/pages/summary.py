@@ -4,7 +4,6 @@ from selenium_pop.pages.base import BasePage
 
 
 class SummaryPage(BasePage):
-
     TOTAL_SHIPPING_SELECTOR = (By.ID, "total_shipping")
     TOTAL_PRICE_SELECTOR = (By.ID, "total_price")
 

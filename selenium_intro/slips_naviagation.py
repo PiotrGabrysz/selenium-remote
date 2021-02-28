@@ -12,7 +12,6 @@ driver = webdriver.Chrome(executable_path=ChromeDriverManager().install(), optio
 driver.get("http://automationpractice.com")
 driver.implicitly_wait(5)
 
-
 # SELECTORS HERE
 LOGIN_BUTTON_SELECTOR = (By.CLASS_NAME, "login")
 EMAIL_FIELD_SELECTOR = (By.ID, "email")
@@ -22,7 +21,6 @@ ADDRESSES_BUTTON_SELECTOR = (By.XPATH, "//a[@title='Addresses']")
 CREDIT_SLIPS_BUTTON_SELECTOR = (By.XPATH, "//a[@title='Credit slips']")
 MY_ADDRESSES_SELECTOR = (By.XPATH, "//div[@class='addresses']//div")
 MY_CREDIT_SLIPS_SELECTOR = (By.XPATH, "//div[@class='credit-slips']//div")
-
 
 # LOGIC HERE
 driver.find_element(*LOGIN_BUTTON_SELECTOR).click()

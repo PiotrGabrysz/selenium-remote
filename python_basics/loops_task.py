@@ -1,6 +1,6 @@
 import time
 
-#part 1
+# part 1
 start_time = time.time()
 while_iterations = 0
 
@@ -20,6 +20,5 @@ if 1 < for_time_left:
     print("While is faster")
 else:
     print("For is faster")
-
 
 assert 1 < for_time_left, f"While time is slower -> for time is {for_time_left}s"

@@ -4,7 +4,6 @@ from selenium_pop.pages.base import BasePage
 
 
 class ProfilePage(BasePage):
-
     ADDRESSES_BUTTON_SELECTOR = (By.XPATH, "//a[@title='Addresses']")
     CREDIT_SLIPS_BUTTON_SELECTOR = (By.XPATH, "//a[@title='Credit slips']")
     MY_ADDRESSES_SELECTOR = (By.XPATH, "//div[@class='addresses']//div")

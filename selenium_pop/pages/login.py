@@ -4,7 +4,6 @@ from selenium_pop.pages.base import BasePage
 
 
 class LoginPage(BasePage):
-
     LOGIN_BUTTON_SELECTOR = (By.CLASS_NAME, "login")
     EMAIL_FIELD_SELECTOR = (By.ID, "email")
     PASSWORD_FIELD_SELECTOR = (By.ID, "passwd")

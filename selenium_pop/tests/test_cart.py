@@ -1,10 +1,11 @@
 import unittest
+
 from hamcrest import *
 
-from selenium_pop.utils import get_driver
 from selenium_pop.config import *
 from selenium_pop.pages.search import SearchPage
 from selenium_pop.pages.summary import SummaryPage
+from selenium_pop.utils import get_driver
 
 
 class CartTest(unittest.TestCase):

@@ -7,12 +7,10 @@ elif i < 0:
 else:
     print("Null")
 
-
 a, b = 0, 0
 
 if a > 0 and b > 0:  # and, or, not
     print("values are positive")
-
 
 if a is not 0:  # a != 0
     print("a is not null")

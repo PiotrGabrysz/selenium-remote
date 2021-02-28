@@ -1,7 +1,7 @@
 import unittest
 
-from selenium_pop.pages.search import SearchPage
 from selenium_pop.config import *
+from selenium_pop.pages.search import SearchPage
 from selenium_pop.utils import get_driver
 
 
