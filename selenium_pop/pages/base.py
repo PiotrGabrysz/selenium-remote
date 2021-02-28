@@ -4,6 +4,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 from selenium_pop.config import TIMEOUT
 
+
 class BasePage:
 
     def __init__(self, driver: webdriver.Chrome):
