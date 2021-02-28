@@ -10,6 +10,7 @@ class SearchPage(BasePage):
     SUBMIT_SEARCH_SELECTOR = (By.NAME, "submit_search")
     PRODUCT_CONTAINER_SELECTOR = (By.CLASS_NAME, "product-container")
     ADD_TO_CART_BUTTON_SELECTOR = (By.CSS_SELECTOR, ".ajax_add_to_cart_button")
+    PROCEED_TO_CHECKOUT_SELECTOR = (By.XPATH, "//*[@title='Proceed to checkout']")
 
     def search_item(self, name):
         self.driver.find_element(*self.SEARCH_FILED_SELECTOR).send_keys(name)
@@ -22,3 +23,7 @@ class SearchPage(BasePage):
         product_element = self.driver.find_element(*self.PRODUCT_CONTAINER_SELECTOR)
         self.hover_mouse_over(product_element)
         self.driver.find_element(*self.ADD_TO_CART_BUTTON_SELECTOR).click()
+        self.check_if_element_visible(self.PROCEED_TO_CHECKOUT_SELECTOR)
+
+    def proceed_to_checkout(self):
+        self.driver.find_element(*self.PROCEED_TO_CHECKOUT_SELECTOR).click()
