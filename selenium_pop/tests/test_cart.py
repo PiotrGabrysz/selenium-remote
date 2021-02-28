@@ -24,6 +24,16 @@ class CartTest(unittest.TestCase):
         assert_that(self.summary_page.get_total_price(), less_than_or_equal_to(31))
         assert_that(self.summary_page.get_shipping_price(), equal_to(2))
 
+    def test_multiple_items(self):
+        self.search_page.search_item("Dress")
+        self.search_page.add_to_cart()
+        self.search_page.continue_shopping()
+        self.search_page.search_item("Blouse")
+        self.search_page.add_to_cart()
+        self.search_page.proceed_to_checkout()
+        assert_that(self.summary_page.get_total_price(), less_than_or_equal_to(50))
+        assert_that(self.summary_page.get_shipping_price(), equal_to(2))
+
     def tearDown(self) -> None:
         self.driver.quit()
 

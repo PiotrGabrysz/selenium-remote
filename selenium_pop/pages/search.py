@@ -10,8 +10,10 @@ class SearchPage(BasePage):
     PRODUCT_CONTAINER_SELECTOR = (By.CLASS_NAME, "product-container")
     ADD_TO_CART_BUTTON_SELECTOR = (By.CSS_SELECTOR, ".ajax_add_to_cart_button")
     PROCEED_TO_CHECKOUT_SELECTOR = (By.XPATH, "//*[@title='Proceed to checkout']")
+    CONTINUE_SHOPPING_SELECTOR = (By.XPATH, "//*[@title='Continue shopping']")
 
     def search_item(self, name):
+        self.driver.find_element(*self.SEARCH_FILED_SELECTOR).clear()
         self.driver.find_element(*self.SEARCH_FILED_SELECTOR).send_keys(name)
         self.driver.find_element(*self.SUBMIT_SEARCH_SELECTOR).click()
 
@@ -26,3 +28,6 @@ class SearchPage(BasePage):
 
     def proceed_to_checkout(self):
         self.driver.find_element(*self.PROCEED_TO_CHECKOUT_SELECTOR).click()
+
+    def continue_shopping(self):
+        self.driver.find_element(*self.CONTINUE_SHOPPING_SELECTOR).click()
