@@ -1,17 +1,16 @@
 import unittest
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium import webdriver
 from hamcrest import *
 
+from selenium_pop.utils import get_driver
 from selenium_pop.config import *
 from selenium_pop.pages.login import LoginPage
 from selenium_pop.pages.profile import ProfilePage
 
+
 class ProfileTest(unittest.TestCase):
 
     def setUp(self) -> None:
-        self.driver = webdriver.Chrome(executable_path=ChromeDriverManager().install())
-        self.driver.implicitly_wait(TIMEOUT)
+        self.driver = get_driver(BROWSER)
         self.driver.get(URL)
 
         self.login_page = LoginPage(self.driver)
